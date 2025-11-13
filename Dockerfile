@@ -1,7 +1,7 @@
 FROM ghcr.io/dockhippie/golang:1.23@sha256:8d1cff06bc3ad04ddc93f0b5346deb48d4079d4a69da49acb207c0c0010041f4 AS build
 
 # renovate: datasource=github-tags depName=philpep/imago
-ENV IMAGO_VERSION=1.7
+ENV IMAGO_VERSION=1.9
 
 RUN git clone -b ${IMAGO_VERSION} https://github.com/philpep/imago.git /srv/app/src && \
   cd /srv/app/src && \
