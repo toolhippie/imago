@@ -7,7 +7,7 @@ RUN git clone -b ${IMAGO_VERSION} https://github.com/philpep/imago.git /srv/app/
   cd /srv/app/src && \
   go mod tidy && CGO_ENABLED=0 go install
 
-FROM ghcr.io/dockhippie/alpine:3.23@sha256:a674aadc1cccd2f424673c7596eff46336210016a50c8082849071f78bb15105
+FROM ghcr.io/dockhippie/alpine:3.23@sha256:290fa97fc3c00802b2a80f40cc21cdd5e6534a4422dcdb0abd57738ac08e86bf
 ENTRYPOINT [""]
 
 RUN apk update && \
