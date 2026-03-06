@@ -1,4 +1,4 @@
-FROM ghcr.io/dockhippie/golang:1.25@sha256:ea999bae9c41c96e053461032a733c07724402a94d2736df3671537518ccc616 AS build
+FROM ghcr.io/dockhippie/golang:1.25@sha256:b21fe99f18791f62b3c3032e72cf90e37361414eea2cfd6c78db6ad0e4961256 AS build
 
 # renovate: datasource=github-tags depName=philpep/imago
 ENV IMAGO_VERSION=1.9
