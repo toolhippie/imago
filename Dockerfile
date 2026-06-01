@@ -1,4 +1,4 @@
-FROM ghcr.io/dockhippie/golang:1.25@sha256:26330f9326ba939d2b4bf5af25e2bc8d239d9ff59d65f807ebfbd3443e8acdd8 AS build
+FROM ghcr.io/dockhippie/golang:1.25@sha256:c5a5cc3d1ad434f31da81ab5866084e738034d0b2fe2e9f749f1da4186f519be AS build
 
 # renovate: datasource=github-tags depName=philpep/imago
 ENV IMAGO_VERSION=1.9
@@ -7,7 +7,7 @@ RUN git clone -b ${IMAGO_VERSION} https://github.com/philpep/imago.git /srv/app/
   cd /srv/app/src && \
   go mod tidy && CGO_ENABLED=0 go install
 
-FROM ghcr.io/dockhippie/alpine:3.23@sha256:629cd5472f21a622e37a9afabdbd39f489dd22a7fe1e4ced6a0db63589e85dfa
+FROM ghcr.io/dockhippie/alpine:3.23@sha256:22643f7f07c00c4d953eda05288488b2923f0b23c92b571303b3f5c3a4e6814e
 ENTRYPOINT [""]
 
 RUN apk update && \
